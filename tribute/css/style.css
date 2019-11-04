@@ -1,0 +1,184 @@
+:root{
+  --transparent: #00000000;
+  --light: #faedee;
+  --dark: #1d1e2c;
+  --accent: #ddbdd5;
+  --line: #5d3e5c;
+}
+body {
+  background-color: var(--light);
+  background-image: linear-gradient(to top right, var(--accent), var(--light), var(--light));
+  font-family: 'Lora', sans-serif;
+}
+i {
+  vertical-align: middle;
+}
+nav, footer {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--dark);
+  padding: 1em 15em;
+  display: flex;
+  justify-content: space-around;
+}
+footer {
+  color: var(--light);
+}
+nav a {
+  color: var(--light);
+  transition: color 0.2s ease-out;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 120%;
+}
+nav a:hover {
+  color: var(--accent);
+}
+nav i {
+    vertical-align: text-top;
+}
+.splash-wrapper-master {
+  background-image: linear-gradient(var(--accent), var(--transparent));
+}
+.splash {
+  display: flex;
+  justify-content: center;
+}
+.splash-text {
+  font-family: 'Montserrat', sans-serif;
+  flex-direction: column;
+  margin: 6em 0em;
+  padding: 2em 1em;
+  font-size: 25px;
+  min-height: 180px;
+}
+.splash-img {
+  background-image: url("../img/alicia.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 34em;
+  transition: all 0.2s ease-out;
+  width: 37em;
+}
+.splash-img:hover {
+  background-size: 35em;
+  width: 38em;
+}
+.splash-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 140px;
+}
+#left-text {
+  text-align: right;
+  vertical-align: 20%;
+  width: 12em;
+}
+#right-text {
+  text-align: left;
+  width: 12em;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+}
+.line hr {
+  width: 90%;
+  color: var(--line);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  padding: 0em 5em;
+  grid-template-areas:
+  "image1 image1 image2"
+  "image3 blog1 blog1"
+  "image3 blog2 blog2";
+  grid-gap: 0.3em;
+}
+.grid-container a {
+  text-decoration: none;
+  transition: color 0.2s ease-out;
+  color: #59656f;
+}
+.grid-container a:hover {
+  color: #ac9fbb;
+}
+.grid-item {
+  padding: 1.8em;
+  font-size: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.3em;
+  align-items: center;
+}
+.grid-item p strong {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+}
+.grid-item img {
+  width: 20em;
+  max-width: 30%;
+  min-width: 30%;
+}
+.grid-item p {
+  padding: 0em 0.3em;
+  font-size: 85%;
+}
+.grid-item li a {
+  font-family: 'Montserrat', sans-serif;
+}
+.image1 {
+  align-items: center;
+  color: var(--dark);
+  grid-area: image1;
+  border-right: solid var(--line) 2px;
+}
+.blog1 {
+  color: var(--dark);
+  grid-area: blog1;
+}
+.image2 {
+  color: var(--dark);
+  grid-area: image2;
+}
+.blog2 {
+  flex-direction: column;
+  align-items: baseline;
+  color: var(--dark);
+  grid-area: blog2;
+}
+.image3 {
+  color: var(--dark);
+  grid-area: image3;
+  border-right: solid var(--line) 2px;
+}
+@media screen and (max-width: 960px) {
+  .grid-item {
+    flex-direction: column;
+    border-right: none;
+    border-bottom: solid var(--line) 2px;
+  }
+  .grid-item img {
+    min-height: 300px;
+    min-width: 201px;
+  }
+  .grid-container {
+    grid-template-areas:
+    "image1"
+    "image2"
+    "image3"
+    "blog1"
+    "blog2";
+    grid-template-columns: 1fr;
+  }
+  .blog2 {
+    border-bottom: none;
+  }
+  nav, footer {
+    padding: 1em 1em;
+  }
+}
