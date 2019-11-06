@@ -163,22 +163,39 @@ nav a:hover {
   .slideshow-wrap {margin: auto;}
 }
 
-.modals {
-  /* position: absolute; */
+#background {
   position: fixed;
-  display: block;
+  display: none;
   z-index: 1;
-  padding-top: 30%;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #000A;
+  background-color: #0003;
 }
 
-.modal {
+#modals {
+  position: fixed;
   display: none;
+  z-index: 2;
+  background-color: #AF33;
+  justify-content: center;
+  top: 20%;
+  left: 30%;
+  width: 40%;
+  height: 60%;
+}
+@@media screen and (min-width: 600px) {
+  #modals {
+    left: 10%;
+    width: 80%;
+  }
+}
+.modal {
+  margin: auto;
+  display: none;
+  background-color: #3FA3;
 }
 .card {
   border-style: solid;

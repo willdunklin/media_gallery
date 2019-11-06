@@ -46,17 +46,21 @@ function showSlides(n) {
 }
 
 function clickCard(n) {
+  console.log("clickCard");
+  console.log(document.getElementById("modals").style.display);
   exitModal();
-  // let currentModal = document.getElementById("m"+n);
-  // show(currentModal);
-  show(document.getElementById("modals"));
+  show(document.getElementById("m"+n));
+  show(document.getElementById("background"));
+  document.getElementById("modals").style.display = "flex";
 }
 
 function exitModal() {
+  console.log("exitModal");
   var currentModal;
   for(var i = 0; i < 6; i++) {
-    // currentModal = document.getElementById("m"+i);
-    // hide(currentModal);
+    currentModal = document.getElementById("m"+i);
+    hide(currentModal);
   }
   hide(document.getElementById("modals"));
+  hide(document.getElementById("background"));
 }

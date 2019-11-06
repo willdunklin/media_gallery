@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <div id="background" onclick="exitModal()"></div>
   <body>
     <nav class="topnav" id="main-nav">
       <a href="#store"><p>Store <i class="material-icons">shopping_cart</i></p></a>
@@ -101,7 +100,9 @@
           </div><!-- end content -->
         </section><!-- end card -->
       </article>
-      <article id="modals">
+
+      <div id="background" onclick="exitModal()"></div>
+      <div id="modals">
         <section class="modal" id="m0">
           <p>modal0</p>
         </section>
@@ -120,7 +121,7 @@
         <section class="modal" id="m5">
           <p>modal5</p>
         </section>
-      </article>
+      </div>
     </div>
     <footer>
       <p>&copy; 2019 Will Dunklin</p>
