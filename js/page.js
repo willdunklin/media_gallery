@@ -1,3 +1,11 @@
+function show(element) {
+  element.style.display = "block";
+}
+
+function hide(element) {
+  element.style.display = "none";
+}
+
 function navToggle() {
   var x = document.getElementById("main-nav");
     if (x.className === "topnav") {
@@ -28,11 +36,27 @@ function showSlides(n) {
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+      hide(slides[i]);
   }
   for (i = 0; i < dots.length; i++) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
+  show(slides[slideIndex-1]);
   dots[slideIndex-1].className += " active";
+}
+
+function clickCard(n) {
+  exitModal();
+  // let currentModal = document.getElementById("m"+n);
+  // show(currentModal);
+  show(document.getElementById("modals"));
+}
+
+function exitModal() {
+  var currentModal;
+  for(var i = 0; i < 6; i++) {
+    // currentModal = document.getElementById("m"+i);
+    // hide(currentModal);
+  }
+  hide(document.getElementById("modals"));
 }

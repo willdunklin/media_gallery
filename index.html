@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
+  <div id="background" onclick="exitModal()"></div>
   <body>
     <nav class="topnav" id="main-nav">
       <a href="#store"><p>Store <i class="material-icons">shopping_cart</i></p></a>
@@ -52,48 +53,73 @@
     </section>
     <div class="grid-wrapper">
       <article class="grid-container">
-        <section href="javascript:void(0);" class="card one hoverable">
+        <section onclick="clickCard(0)" class="card one hoverable">
           <div class="thumb"></div><hr>
           <div class="card-content">
             <h3>Card Title</h3>
             <p>Lorem ipsum dolom, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div><!-- end content -->
-        </a><!-- end card -->
-        <a href="javascript:void(0);" class="card two hoverable">
+        </section><!-- end card -->
+
+        <section onclick="clickCard(1)" class="card two hoverable">
           <div class="thumb"></div><hr>
           <div class="card-content">
             <h3>Card Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,o laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div><!-- end content -->
-        </a><!-- end card -->
-        <a href="javascript:void(0);" class="card three hoverable">
+        </section><!-- end card -->
+
+        <section onclick="clickCard(2)" class="card three hoverable">
           <div class="thumb"></div><hr>
           <div class="card-content">
             <h3>Card Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div><!-- end content -->
-        </a><!-- end card -->
-        <a href="javascript:void(0);" class="card four hoverable">
+        </section><!-- end card -->
+
+        <section onclick="clickCard(3)" class="card four hoverable">
           <div class="thumb"></div><hr>
           <div class="card-content">
             <h3>Card Title</h3>
             <p>Lorem ipsum dolor sit amet, consecommodo consequat.</p>
           </div><!-- end content -->
-        </a><!-- end card -->
-        <a href="javascript:void(0);" class="card five hoverable">
+        </section><!-- end card -->
+
+        <section onclick="clickCard(4)" class="card five hoverable">
           <div class="thumb"></div><hr>
           <div class="card-content">
             <h3>Card Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minsequat.</p>
           </div><!-- end content -->
-        </a><!-- end card -->
-        <a href="javascript:void(0);" class="card six hoverable">
+        </section><!-- end card -->
+
+        <section onclick="clickCard(5)" class="card six hoverable">
           <div class="thumb"></div><hr>
           <div class="card-content">
             <h3>Card Title</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad mini ea commodo consequat.</p>
           </div><!-- end content -->
-        </a><!-- end card -->
+        </section><!-- end card -->
+      </article>
+      <article id="modals">
+        <section class="modal" id="m0">
+          <p>modal0</p>
+        </section>
+        <section class="modal" id="m1">
+          <p>modal1</p>
+        </section>
+        <section class="modal" id="m2">
+          <p>modal2</p>
+        </section>
+        <section class="modal" id="m3">
+          <p>modal3</p>
+        </section>
+        <section class="modal" id="m4">
+          <p>modal4</p>
+        </section>
+        <section class="modal" id="m5">
+          <p>modal5</p>
+        </section>
       </article>
     </div>
     <footer>
