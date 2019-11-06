@@ -64,8 +64,8 @@ nav a:hover {
 @media screen and (max-width: 768px) {
   .topnav a {display: none;}
   .topnav a.trigram {display: inherit; align-self: flex-end;}
-  .topnav.responsive {align-items: center;}
-  .topnav.responsive a {display: inherit;}
+  .topnav.responsive {align-items: center; padding: .5em 0em;}
+  .topnav.responsive a {display: inherit; padding: .3em 0em;}
   .topnav.responsive a.trigram {visibility: hidden; position: absolute; right: 3%; top: 2%;}
   .trigram {display: inherit;}
   .topnav.responsive a.trigram::after {content:'\000D7'; visibility: visible; text-indent: -.5em; font-size: 1.75em;}
@@ -82,7 +82,7 @@ nav a:hover {
   position: relative;
   max-width: 1300px;
   margin: 0em 2em;
-  padding: 1em;
+  padding: .5em 1em;
 }
 .prev, .next {
   position: absolute;
@@ -113,6 +113,12 @@ nav a:hover {
 }
 .slide p {
   text-align: center;
+}
+.slideshow-wrap {
+  transition: all .1s ease-in-out;
+}
+.slideshow-wrap:hover .slide img {
+  transform: scale(1.015);
 }
 
 .grid-wrapper {
