@@ -216,12 +216,29 @@ nav a:hover {
 @media screen and (min-width: 1000px) {
   #modals {left: 30%; width: 40%;}
 }
-
 .modal {
   margin: auto;
   display: none;
   background-color: #3FA3;
 }
+
+.modal, #modals, #background {
+  animation-name: fade;
+  animation-duration: .5s;
+}
+.modal, #modals {
+  animation-name: zoom;
+  animation-duration: .3s;
+}
+@keyframes fade {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes zoom {
+  from {transform: scale(0);}
+  to {transform: scale(1);}
+}
+
 .card {
   border-style: solid;
   border-color: #333;
@@ -229,12 +246,6 @@ nav a:hover {
 }
 .card-content {
   padding: .8em;
-}
-.one .thumb {
-  background-image: url('../img/beach.jpg');
-}
-.two .thumb {
-  background-image: url('../img/beach.jpg');
 }
 
 footer {
