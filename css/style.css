@@ -69,6 +69,23 @@ nav a:hover {
   .trigram {display: inherit;}
   .topnav.responsive a.trigram::after {content:'\000D7'; visibility: visible; text-indent: -.5em; font-size: 1.75em;}
 }
+
+.title {
+  padding-top: .3em;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.subtitle {
+  padding-top: .5em;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+.subtitle hr {
+  width: 80%;
+}
+
+
 .hoverable {
   transition: all .2s ease-out;
   cursor: pointer;
@@ -76,7 +93,6 @@ nav a:hover {
 .hoverable:hover {
   transform: scale(1.02);
 }
-
 .slideshow {
   width: 100%;
 }
@@ -130,6 +146,10 @@ nav a:hover {
 .slideshow-wrap:hover .slide img {
   transform: scale(1.015);
 }
+@media screen and (max-width: 600px) {
+  .dot-wrap {display: none;}
+  .slideshow-wrap {padding-bottom: 0em;}
+}
 
 .grid-wrapper {
   display: flex;
@@ -172,26 +192,31 @@ nav a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #0003;
+  background-color: #faedeeA0;
 }
 
 #modals {
   position: fixed;
   display: none;
   z-index: 2;
-  background-color: #AF33;
+  background-color: var(--light);
   justify-content: center;
   top: 20%;
-  left: 30%;
-  width: 40%;
+  left: 5%;
+  width: 90%;
   height: 60%;
 }
-@@media screen and (min-width: 600px) {
-  #modals {
-    left: 10%;
-    width: 80%;
-  }
+@media screen and (min-width: 600px) {
+  #modals {left: 15%; width: 70%;}
+  #background {background-color: #0005;}
 }
+@media screen and (min-width: 768px) {
+  #modals {left: 20%; width: 60%;}
+}
+@media screen and (min-width: 1000px) {
+  #modals {left: 30%; width: 40%;}
+}
+
 .modal {
   margin: auto;
   display: none;
