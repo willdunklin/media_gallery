@@ -25,6 +25,7 @@ a {
 i {
   vertical-align: middle;
 }
+
 nav, footer {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--dark);
@@ -84,7 +85,6 @@ nav a:hover {
 .subtitle hr {
   width: 80%;
 }
-
 
 .hoverable {
   transition: all .2s ease-out;
@@ -150,6 +150,14 @@ nav a:hover {
   .dot-wrap {display: none;}
   .slideshow-wrap {padding-bottom: 0em;}
 }
+.fade {
+  animation-name: fade-slide;
+  animation-duration: .5s;
+}
+@keyframes fade-slide {
+  from {opacity: .5;}
+  to {opacity: 1;}
+}
 
 .grid-wrapper {
   display: flex;
@@ -201,6 +209,7 @@ nav a:hover {
   z-index: 2;
   background-color: var(--light);
   justify-content: center;
+  flex-direction: column;
   top: 20%;
   left: 5%;
   width: 90%;
@@ -219,18 +228,25 @@ nav a:hover {
 .modal {
   margin: auto;
   display: none;
-  background-color: #3FA3;
+}
+.close {
+  right: 2%;
+  top: 0%;
+  position: absolute;
+  font-size: 3em;
+  user-select: none;
+  cursor: pointer;
 }
 
 .modal, #modals, #background {
-  animation-name: fade;
+  animation-name: fade-modal;
   animation-duration: .5s;
 }
 .modal, #modals {
   animation-name: zoom;
   animation-duration: .3s;
 }
-@keyframes fade {
+@keyframes fade-modal {
   from {opacity: 0;}
   to {opacity: 1;}
 }
