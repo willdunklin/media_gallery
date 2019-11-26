@@ -1,5 +1,5 @@
 function show(element) {
-  element.style.display = "block";
+  element.style.display = "flex";
 }
 
 function hide(element) {
@@ -51,7 +51,7 @@ function clickCard(n) {
   exitModal();
   show(document.getElementById("m"+n));
   show(document.getElementById("background"));
-  document.getElementById("modals").style.display = "flex";
+  show(document.getElementById("modals"));
 }
 
 function exitModal() {

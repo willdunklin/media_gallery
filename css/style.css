@@ -82,8 +82,12 @@ nav a:hover {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
-.subtitle hr {
+hr {
   width: 80%;
+}
+h3 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hoverable {
@@ -167,13 +171,21 @@ nav a:hover {
 .thumb {
   background-position: center;
   background-size: cover;
-  padding-bottom: 56%;
+}
+.thumb img {
+  padding: .6em;
+  padding-bottom: 0em;
+  width: 100%;
 }
 .grid-container {
   display: grid;
   grid-gap: 1em;
   grid-template-columns: 1fr;
   max-width: 92%;
+}
+#center-break {
+  width: 60%;
+  padding: 0;
 }
 @media screen and (min-width: 600px) {
   .grid-container {grid-template-columns: repeat(2, 1fr); max-width: 95%;}
@@ -200,7 +212,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: #faedeeA0;
+  cursor: pointer;
 }
 
 #modals {
@@ -215,6 +227,7 @@ nav a:hover {
   width: 90%;
   height: 60%;
 }
+
 @media screen and (min-width: 600px) {
   #modals {left: 15%; width: 70%;}
   #background {background-color: #0005;}
@@ -228,6 +241,8 @@ nav a:hover {
 .modal {
   margin: auto;
   display: none;
+  justify-content: center;
+  flex-direction: column;
 }
 .close {
   right: 2%;
@@ -236,6 +251,22 @@ nav a:hover {
   font-size: 3em;
   user-select: none;
   cursor: pointer;
+}
+.modal h3 {
+  padding: .1em;
+  font-size: 26px;
+}
+.modal hr {
+  width: 30%;
+}
+.modal img {
+  padding: .4em;
+  width: 75%;
+  margin: auto;
+}
+.modal p {
+  width: 80%;
+  margin: auto;
 }
 
 .modal, #modals, #background {
